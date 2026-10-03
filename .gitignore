@@ -1,0 +1,6 @@
+*.log
+*.swap
+swapfile
+work/
+backups/
+.DS_Store

@@ -1,0 +1,12 @@
+[Unit]
+Description=Check Steam Deck S3/S4 Resume Support and Activate Hibernation Swap
+RequiresMountsFor=/home
+Before=systemd-suspend.service systemd-suspend-then-hibernate.service systemd-hibernate.service
+
+[Service]
+Type=oneshot
+ExecStart=/etc/deck-s2h/manage.sh prepare
+TimeoutStartSec=90s
+
+[Install]
+WantedBy=multi-user.target
